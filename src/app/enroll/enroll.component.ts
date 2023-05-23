@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-enroll',
@@ -35,6 +35,9 @@ export class EnrollComponent implements OnInit{
   });
   enrollSubmitted(){
     console.log(this.enrollForm.value);
+  }
+alertWithSuccess(){
+    Swal.fire("Thank You...",'You Enrolled Successfully','success')
   }
   }
 
